@@ -38,11 +38,11 @@ console.log(result); */
 /* ODD/EVEN TASK */
 //2. ask user if odd or even
 let userChoice = prompt('odd or even?');
-    console.log(`You chose ${userChoice}`);
-/* while (userChoice !== 'odd' || userChoice !== 'even') {
+while (userChoice !== 'odd' && userChoice !== 'even') {
     alert('Please type "odd" or "even"');
     userChoice = prompt('odd or even?');
-} */
+}
+console.log(`You chose ${userChoice}`);
 if (userChoice === 'even') {
     userChoice = true;
 } else {
