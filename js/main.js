@@ -9,11 +9,13 @@ btnWord.addEventListener('click', function() {
         userWord = prompt('choose a word!');
     }
     let userWordChoice = document.querySelector('h1');
-    userWordChoice.innerHTML += `<span>You chose: ${userWord}</span>`;
+    userWordChoice.innerHTML = 'Parola palindroma?';
+    userWordChoice.innerHTML += ` You chose: ${userWord}`;
     let wordResult = document.getElementById('word-result');
+    wordResult.innerHTML = '';
     //4. call function for checking user input
     const result = checkForPalindrome(userWord);
-    wordResult.innerHTML += `${result}. Refresh the page to try again!`;
+    wordResult.innerHTML += `${result}. Click the button to try again!`;
 })
 
 
@@ -35,9 +37,9 @@ function checkForPalindrome (word) {
     //1.2. if word is palindrome print out "the word is palindrome"
     //     else "the word isn't palindrome"
     if (userReverse === word) {
-        return `Reverse ${userReverse}: the word you chose is palindrome`;
+        return `Reverse: ${userReverse}. The word you chose is palindrome`;
     } else {
-        return `Reverse ${userReverse}: the word is not palindrome`;
+        return `Reverse: ${userReverse}. The word is not palindrome`;
     }
 }
 
@@ -53,6 +55,7 @@ btnOddEven.addEventListener('click', function() {
         userChoice = prompt('odd or even?');
     }
     const oddEven = document.querySelector('.odd-even > h1');
+    oddEven.innerHTML = 'Odd or even?';
     oddEven.innerHTML += ` You chose ${userChoice}`;
     if (userChoice === 'even') {
         userChoice = true;
@@ -78,9 +81,9 @@ btnOddEven.addEventListener('click', function() {
     //8. get the winner
     const result = document.getElementById('result');
     if(userChoice === sumResult) {
-        result.innerHTML = 'You won!';
+        result.innerHTML = 'Congrats! You won!';
     } else {
-        result.innerHTML = 'You lose';
+        result.innerHTML = 'Oh no! You lose! Click the button to try again.';
     }
 })
 

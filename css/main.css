@@ -1,0 +1,45 @@
+/* GENERAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    align-items: center;
+}
+
+section:first-child {
+    justify-content: flex-end;
+    margin-bottom: 50px;
+}
+section:last-child {
+    justify-content: flex-start;
+}
+
+section h1,
+section button,
+section h2,
+section h3 {
+    margin-bottom: 20px;
+}
+
+h1,
+.odd-even h2#result {
+    color: orange;
+}
+button {
+    padding: 5px 20px;
+    background-color: yellowgreen;
+    border-radius: 15px;
+    color: black;
+}
